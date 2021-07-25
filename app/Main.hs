@@ -52,4 +52,4 @@ main :: IO()
 main = do
     hSetBuffering stdout NoBuffering
     putStrLn "Hi"
-    run 4000 app
+    run 80 app

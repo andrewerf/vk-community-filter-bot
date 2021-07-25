@@ -10,8 +10,8 @@ description:    Please see the README on GitHub at <https://github.com/andrewerf
 homepage:       https://github.com/andrewerf/vk-community-filter-bot#readme
 bug-reports:    https://github.com/andrewerf/vk-community-filter-bot/issues
 author:         Andrew A.A.
-maintainer:     example@example.com
-copyright:      2021 Andrew A.A.
+maintainer:     andrew-aralov@yandex.ru
+copyright:      2021 Andrew A.A
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -49,7 +49,9 @@ executable vk-community-filter-bot-exe
       Paths_vk_community_filter_bot
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -static
+  cc-options: -static
+  ld-options: -static -pthread
   build-depends:
       aeson
     , aeson-pretty

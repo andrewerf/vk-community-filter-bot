@@ -103,7 +103,7 @@ data WallReplyEvent = WallReplyEvent {
     from_id :: Integer,
     date :: Integer,
     text :: String,
-    attachments :: [Attachment]
+    attachments :: Maybe [Attachment]
 } deriving (Show, Generic, Aeson.FromJSON, Aeson.ToJSON)
 --
 
